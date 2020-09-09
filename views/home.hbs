@@ -1,0 +1,95 @@
+{{!-- Home Content --}}
+<div class="col h-100 content">
+  {{!-- Button createPlaylist and display user playlists section --}}
+  <section id="user-home" class="">
+    <div class="section-wrap container d-flex justify-content-center">
+      <div class="row w-100">
+        <div class="col h-100">
+          <h1 class="title">playgr<i class="far fa-play-circle play-icon-title"></i>und</h1>
+          <button class="btn btn-success create-btn" id="new-playlist-btn">Create Playlist</button>
+          <div class="playlists" id="playLists-display">
+            {{!-- <div class="playlist-example">
+              <p class="playlist-name"></p>
+              <button class="playlist-play-btn btn btn-primary">Play</button>
+              <button class="playlist-edit-btn btn btn-success">Edit</button>
+              <button class="playlist-delete-btn btn btn-danger">Delete</button>
+            </div> --}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- Search videos, create and save new playlists --}}
+  <section id="edit-playlist" class="d-none">
+    <div class="section-wrap container-fluid">
+      <button id="back-btn-1">back</button>
+      <form id="playlist-search-form" class="container-fluid">
+        <div class="form-group d-flex justify-content-center">
+          <input class="form-control no-border" type="text" name="search" id="playlist-search-input"
+            placeholder="Make your search here">
+          <i class="fas fa-search search-btn search-icon"></i>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col search-result mt-3" id="search-results">
+
+        </div>
+        <div class="col playlist-wrap overflow-hidden mt-3">
+          <input class="form-control mb-2" id="playlist-name" type="text" value="" placeholder="Name your playlist here">
+          <div class="mb-2">
+            <button class="btn btn-success" id="saveBtn">Save</button>
+            <button class="btn btn-warning text-light" id="clearBtn">Clear</button>
+          </div>
+          <div class="playlistDiv" id="playlist-display">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- Player and timer section --}}
+  <section id="play-playlist" class="d-none">
+    <div class="section-wrap  container-fluid border m-2">
+      <div class="row timer border m-2">
+        <div id="chronometer">
+          <div>
+            <span class="chronometer">0</span>
+            <span class="chronometer">0</span>
+            <span>:</span>
+            <span class="chronometer">0</span>
+            <span class="chronometer">0</span>
+            <span class="chronometer">0</span>
+            <span class="chronometer">0</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="chronometer-time-input" placeholder="HH">
+          <input type="text" class="chronometer-time-input" placeholder="MM">
+          <button id="chronometer-switch-button">SET</button>
+          <button id="chronometer-reset-button">RESET</button>
+        </div>
+        <button id="back-btn-2">back</button>
+      </div>
+
+      <div class="row player">
+        <video class="col video-js">
+          <source src="https://youtube.com/watch?v=m7Bc3pLyij0" type="video/youtube" wmode="transparent">
+        </video>
+        <div class="col vjs-playlist border">
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{{!-- scripts --}}
+<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+<script src="../../node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
+<script src="../../node_modules/videojs-playlist-ui/dist/videojs-playlist-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+  integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+<script src="src/classes.js"></script>
+<script src="src/videojsHandler.js"></script>
+<script src="src/playground-frontend.js"></script>
