@@ -7,10 +7,7 @@ const userSchema = new mongoose.Schema({
 	tokenExpiration: Number,
 	googleID: String,
 	playLists: [
-		{ 
-			name: String,
-			links: Array,
-		}
+		{ type: mongoose.Schema.Types.ObjectId, ref: 'Playlist' }
 	]
 }, {
 	timestamps: {

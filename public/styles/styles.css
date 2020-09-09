@@ -7160,4 +7160,31 @@ section {
   border-radius: 4px;
   margin: 2rem 0; }
 
+.wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.vjs-playlist {
+  width: 400px; }
+
+.chronometer-wrap {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-self: center;
+  width: fit-content;
+  justify-content: space-around;
+  border: 1px solid #9342a2;
+  border-radius: 4px; }
+
+.timer-wrap {
+  padding: .3rem .5rem;
+  border: 1px solid #9342a2;
+  border-radius: 4px; }
+
+.timer-wrap .chronometer {
+  font-size: 1rem;
+  position: relative;
+  margin: 0 .5rem; }
+
 /*# sourceMappingURL=styles.css.map */

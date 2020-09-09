@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $primary: #9342a2;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -140,4 +141,234 @@ section {
   border: 1px solid #9342a2;
   border-radius: 4px;
   margin: 2rem 0;
+}
+.wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+.vjs-playlist {
+  width: 400px;
+}
+.chronometer-wrap {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-self: center;
+  width: fit-content;
+  justify-content: space-around;
+  border: 1px solid $primary;
+  border-radius: 4px;
+}
+.timer-wrap {
+  padding: .3rem .5rem;
+  border: 1px solid $primary;
+  border-radius: 4px;
+}
+.timer-wrap .chronometer{
+  font-size: 1rem;
+  position: relative;
+  margin: 0 .5rem;
+=======
+$primary: #9342a2;
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+* {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    height: auto;
+}
+
+.navbar {
+    padding: .5rem;
+    background: #9342a2;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+.presentation {
+    height: calc(100vh - 6rem);
+}
+
+.presentation-title {
+    color: #9342a2;
+    overflow: hidden;
+    position: relative;
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+}
+
+.play-icon {
+    font-size: 5rem;
+}
+
+.login-btn {
+    font-weight: 500;
+    padding: .5rem .5rem;
+    background-color: #9342a2;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.form-group {
+    border-radius: 2px;
+    border: .1rem solid #9342a2;
+    margin: 1rem 0;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: none
+}
+
+.form-control {
+    padding: .5rem;
+}
+
+.search-btn {
+    color: #9342a2;
+    border: none;
+    background-color: transparent;
+}
+
+.search-icon {
+    padding: .4rem .4rem 0 0;
+    font-size: 1.6rem
+}
+
+.privacy-content * {
+    overflow: hidden;
+}
+
+.privacy-policy {
+    color: white
+}
+
+.privacy-policy:hover {
+    text-decoration: none;
+    color: white
+}
+
+footer {
+    margin: 0;
+    padding: .4rem;
+    background-color: #9342a2;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    height: 3rem;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.playlist-wrap {
+    overflow: hidden;
+    flex-grow: 1;
+    height: auto;
+}
+
+.search-result {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 4;
+    position: relative;
+    height: auto;
+    width: 100%
+}
+
+.search-content-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-right: .4rem
+}
+
+.search-content-box * {
+    overflow: hidden;
+}
+
+.title {
+    color: #9342a2;
+    overflow: hidden;
+    position: relative;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    margin: 4rem 0;
+}
+
+.play-icon-title {
+    font-size: 2.5rem;
+}
+
+section {
+    overflow: hidden;
+}
+
+.d-none {
+    display: none
+}
+
+.playlists {
+    height: auto;
+    border: 1px solid #9342a2;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.vjs-playlist {
+    width: 400px;
+}
+
+.chronometer-wrap {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    align-self: center;
+    width: fit-content;
+    justify-content: space-around;
+    border: 1px solid $primary;
+    border-radius: 4px;
+}
+
+.timer-wrap {
+    padding: .3rem .5rem;
+    border: 1px solid $primary;
+    border-radius: 4px;
+}
+
+.timer-wrap .chronometer {
+    font-size: 1rem;
+    position: relative;
+    margin: 0 .5rem;
+>>>>>>> 1592cf368c2bccf91a5bdac8643287aff01f7e61
 }

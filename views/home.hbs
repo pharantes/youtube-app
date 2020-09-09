@@ -7,13 +7,8 @@
         <div class="col h-100">
           <h1 class="title">playgr<i class="far fa-play-circle play-icon-title"></i>und</h1>
           <button class="btn btn-success create-btn" id="new-playlist-btn">Create Playlist</button>
-          <div class="playlists" id="playLists-display">
-            {{!-- <div class="playlist-example">
-              <p class="playlist-name"></p>
-              <button class="playlist-play-btn btn btn-primary">Play</button>
-              <button class="playlist-edit-btn btn btn-success">Edit</button>
-              <button class="playlist-delete-btn btn btn-danger">Delete</button>
-            </div> --}}
+          <div class="playlists p-2" id="playlists-display">
+
           </div>
         </div>
       </div>
@@ -22,7 +17,7 @@
   {{!-- Search videos, create and save new playlists --}}
   <section id="edit-playlist" class="d-none">
     <div class="section-wrap container-fluid">
-      <button id="back-btn-1">back</button>
+      <button id="back-btn-1" class="btn btn-primary m-2">Back</button>
       <form id="playlist-search-form" class="container-fluid">
         <div class="form-group d-flex justify-content-center">
           <input class="form-control no-border" type="text" name="search" id="playlist-search-input"
@@ -35,7 +30,8 @@
 
         </div>
         <div class="col playlist-wrap overflow-hidden mt-3">
-          <input class="form-control mb-2" id="playlist-name" type="text" value="" placeholder="Name your playlist here">
+          <input class="form-control mb-2" id="playlist-name" type="text" value=""
+            placeholder="Name your playlist here">
           <div class="mb-2">
             <button class="btn btn-success" id="saveBtn">Save</button>
             <button class="btn btn-warning text-light" id="clearBtn">Clear</button>
@@ -49,34 +45,37 @@
   </section>
   {{!-- Player and timer section --}}
   <section id="play-playlist" class="d-none">
-    <div class="section-wrap  container-fluid border m-2">
-      <div class="row timer border m-2">
-        <div id="chronometer">
-          <div>
+    <div class="section-wrap d-flex flex-column container-fluid">
+      <div class="row chronometer-wrap timer m-2 mb-2">
+        <div id="chronometer" class="d-none">
+          <div class="timer-wrap m-2">
+            <span class="chronometer">0</span>
+            <span>:</span>
             <span class="chronometer">0</span>
             <span class="chronometer">0</span>
             <span>:</span>
             <span class="chronometer">0</span>
             <span class="chronometer">0</span>
-            <span class="chronometer">0</span>
-            <span class="chronometer">0</span>
           </div>
         </div>
-        <div>
-          <input type="text" class="chronometer-time-input" placeholder="HH">
-          <input type="text" class="chronometer-time-input" placeholder="MM">
-          <button id="chronometer-switch-button">SET</button>
-          <button id="chronometer-reset-button">RESET</button>
+        <div class="d-flex flex-row justify-content-around align-items-center">
+          <input type="text" class="chronometer-time-input form-control mr-2" placeholder="HH">
+          <input type="text" class="chronometer-time-input form-control" placeholder="MM">
+          <button id="chronometer-switch-button" class="btn btn-success m-2">SET</button>
+          <button id="chronometer-reset-button" class="btn btn-warning m-2">RESET</button>
         </div>
-        <button id="back-btn-2">back</button>
+        <button id="back-btn-2" class="btn btn-primary m-2">Back</button>
       </div>
 
-      <div class="row player">
-        <video class="col video-js">
-          <source src="https://youtube.com/watch?v=m7Bc3pLyij0" type="video/youtube" wmode="transparent">
+      <div class="wraper">
+        <video class="video-js">
+          
         </video>
-        <div class="col vjs-playlist border">
-
+        <div class="vjs-playlist">
+          <!--
+              The contents of this element will be filled based on the
+              currently loaded playlist
+            -->
         </div>
       </div>
     </div>
@@ -85,9 +84,9 @@
 
 {{!-- scripts --}}
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-<script src="../../node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
-<script src="../../node_modules/videojs-playlist-ui/dist/videojs-playlist-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.min.js"></script>
+<script src="src/videojs/videojs-playlist.js"></script>
+<script src="src/videojs/videojs-playlist-ui.js"></script>
+<script src="src/videojs/Youtube.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
   integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
 <script src="src/classes.js"></script>
