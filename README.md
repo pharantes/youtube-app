@@ -4,4 +4,4 @@ This small app is a YouTube filter that allows parents to smartly create playlis
 
 Stack: NodeJS, ExpressJS, HBS, VideoJS, Google OAuth 2.0, PassportJS, YouTube API.
 
-Authors: Naaman Hirschfeld and Pedro Arantes
+Authors: Pedro Arantes and Naaman Hirschfeld
